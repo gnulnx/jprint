@@ -18,7 +18,9 @@ example_dict = {
 jprint(example_dict)
 ```
 
-![Python Image](images/python_img.png)
+<!-- ![Python Image](images/python_img.png) -->
+![](https://raw.githubusercontent.com/gnulnx/jprint/main/images/python_img.png?token=GHSAT0AAAAAAB6XJL5JKQJX3HBELAZ4VMVEZB2YBXA)
+
 
 ## JSON String Example
 ```python
@@ -51,7 +53,7 @@ json_string = '''
 jprint(json_string, indent=2)
 ```
 
-![Json Image](images/json_img.png)
+![Json Image](https://raw.githubusercontent.com/gnulnx/jprint/main/images/json_img.png?token=GHSAT0AAAAAAB6XJL5ITD2PDRN26LXXB7MSZB2YCFQ)
 
 ## Under The Covers
 
