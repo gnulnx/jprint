@@ -18,19 +18,18 @@ def format(obj: Union[dict, str], **kwargs) -> str:
     return json.dumps(obj, **kwargs)
 
 
-def jprint(obj: Union[dict, str], **kwargs):
+def jprint(obj: Union[dict, list, str], **kwargs):
     """
-    Pretty print Python dictionaries and JSON strings.
+    Pretty print Python dictionaries, lists, and JSON strings.
     If str is not valid json it will be printed as is.
     """
-    if isinstance(obj, dict):
+    if isinstance(obj, (dict, list)):
         json_str = format(obj, **kwargs)
     else:
         try:
             json_str = format(json.loads(obj), **kwargs)
         except json.JSONDecodeError:
             json_str = format(obj, **kwargs)
-            # raise ValueError("Input str is not a valid JSON string")
 
     colorized_json = highlight(json_str, JsonLexer(), TerminalFormatter())
     print(colorized_json)
