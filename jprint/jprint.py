@@ -18,7 +18,7 @@ def format(obj: Union[dict, str], **kwargs) -> str:
     return json.dumps(obj, **kwargs)
 
 
-def jprint(obj: Union[dict, list, str], **kwargs):
+def jprint(obj: Union[dict, list, tuple, str], **kwargs):
     """
     Pretty print Python dictionaries, lists, and JSON strings.
     If str is not valid json it will be printed as is.
