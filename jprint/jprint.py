@@ -23,6 +23,9 @@ def jprint(obj: Union[dict, list, tuple, str], **kwargs):
     Pretty print Python dictionaries, lists, and JSON strings.
     If str is not valid json it will be printed as is.
     """
+    if isinstance(obj, tuple):
+        obj = list(obj)
+
     if isinstance(obj, (dict, list)):
         json_str = format(obj, **kwargs)
     else:
